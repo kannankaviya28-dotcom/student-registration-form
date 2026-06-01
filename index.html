@@ -1,53 +1,130 @@
 <!DOCTYPE html>
-<html>
-   <head>
-    <title>student registration form</title>
-   </head>
-<body bgcolor="purple">
-    <h1 align="center">student registration form</h1>
-    <form>
-        <table align="center"
-        cellpadding="8">
-        <tr>
-            <td>student name:</td>
-            <td><input type="text"name="sname"></td>
-        </tr>
-        <td>father name:</td>
-        <td><input type="text"name="fname"></td>
-    </tr>
-    <tr>
-        <td>mother name:</td>
-        <td>input type="text"name="mname"</td>
-    </tr>
-    <tr>
-        <td>Email id:</td>
-        <td><input type="email"name="email name"></td>
-    </tr>
-    <tr>
-        <td>phone number:</td>
-        <td><input type="tel"name="phone"></td>
-    </tr>
-    <tr>
-        <td>Gender:</td>
-        <td>input type="radio"name="Gender">female</td>
-    </tr>
-    <tr>
-        <td>Date of birth:</td>
-        <td><input type="date"name="dob"></td>
-    </tr>
-    <tr>
-        <td>course:</td>
-        <td>
-            <select>
-                <option>BCA</option>
-                <option>B.sc CS</option>
-                <option>b.COM</option>
-            </select>
-        </td>
-        <tr>
-            <td>address:</td>
-            <td><textarea rows="4" cols="20"></td>
-        </tr>
-    </table>
-    </form>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Student Login Form</title>
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial, sans-serif;
+}
+
+body{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    height:100vh;
+    background:#f2f2f2;
+}
+
+.container{
+    width:800px;
+    height:450px;
+    background:white;
+    display:flex;
+    border-radius:10px;
+    overflow:hidden;
+    box-shadow:0 4px 15px rgba(0,0,0,0.2);
+}
+
+/* Left Side Image */
+.left{
+    width:50%;
+}
+
+.left img{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+}
+
+/* Right Side Form */
+.right{
+    width:50%;
+    padding:40px;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+}
+
+h2{
+    text-align:center;
+    margin-bottom:25px;
+    color:#333;
+}
+
+label{
+    font-weight:bold;
+    margin-top:10px;
+}
+
+.required{
+    color:red;
+}
+
+input[type="email"],
+input[type="password"]{
+    width:100%;
+    padding:10px;
+    margin-top:5px;
+    margin-bottom:15px;
+    border:1px solid #ccc;
+    border-radius:5px;
+}
+
+.remember{
+    margin-bottom:20px;
+}
+
+button{
+    width:100%;
+    padding:12px;
+    background:#007BFF;
+    color:white;
+    border:none;
+    border-radius:5px;
+    font-size:16px;
+    cursor:pointer;
+}
+
+button:hover{
+    background:#0056b3;
+}
+</style>
+</head>
+
+<body>
+
+<div class="container">
+
+    <div class="left">
+        <img src="https://images.unsplash.com/photo-1523240795612-9a054b0db644?w=800" alt="Student Image">
+    </div>
+
+    <div class="right">
+        <h2>Student Login</h2>
+
+        <form>
+            <label>Email <span class="required">*</span></label>
+            <input type="email" placeholder="Enter your email" required>
+
+            <label>Password <span class="required">*</span></label>
+            <input type="password" placeholder="Enter your password" required>
+
+            <div class="remember">
+                <input type="checkbox" id="remember">
+                <label for="remember">Remember Me</label>
+            </div>
+
+            <button type="submit">Login</button>
+        </form>
+    </div>
+
+</div>
+
 </body>
+</html>
